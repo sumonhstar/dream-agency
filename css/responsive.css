@@ -1,0 +1,354 @@
+/* ===fixed-navigation-for-large-device===== */
+@media screen and (min-width:991.95px){
+    .navigation-menu-logo.fixed{
+        background-color: var(--other-color) !important;
+        position: fixed;
+        width: var(--max-size);
+        left:0;
+        top:0;
+        z-index: 20;
+        padding:.5rem 10rem;
+    }
+}
+
+/* ====navigation-for-small-device==== */
+@media screen and (max-width:991.95px){
+    .navigation-menu-logo nav{
+        position: fixed;
+        top:0;
+        left:-100%;
+        width: 85%;
+        height: 100vh;
+        background-color: var(--other-color);
+        z-index: 50 !important;
+        display: flex;
+        justify-content: center;
+        transition: var(--transition-500);
+    }
+    .navigation-menu-logo nav.active{
+        left:0 !important;
+    }
+    .navigation-menu-logo nav ul{
+        flex-direction: column;
+        justify-content: center;
+        gap:5rem;
+    }
+    .menu-close-btn{
+        display: block;
+        position: absolute;
+        top:2rem;
+        right:2rem;
+        cursor: pointer;
+    }
+    .header-social-link{
+        position: fixed;
+        right:.5rem;
+        top:50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap:3rem;
+        z-index: 15;
+    }
+    .header-social-link a{
+        width: 3.5rem;
+        height: 4rem;
+        background-color: #FFF4D4;
+    }
+    .menu-open-btn{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* ====responsive-for-extra-small-device===== */
+@media screen and (max-width:575.95px){
+    html,body{
+        margin: 0;
+        padding:0;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    :root{
+    --bigger-font:4rem;
+    --big-font:3.5rem;
+    --medium-font:2rem;
+    --narmal-font:1.5rem;
+    --small-font:1.4rem;
+    --smaller-font:1.2rem;
+    }
+    /* ====banner-section==== */
+    .header{
+        height: max-content;
+    }
+    .banner-text{
+        margin-block: 5rem;
+    }
+    .btn{
+        font-size: var(--smaller-font);
+    }
+    .banner-image{
+        height: max-content;
+    }
+    .banner-image .banner-shap,
+    .circle{
+        display: none;
+    }
+    .banner-image .img{
+        position: inherit;
+        width: 60%;
+        clip-path: none;
+        height: auto;
+    }
+    /* ====business-section===== */
+    .business-section::after{
+        width: var(--max-size);
+        border-top-right-radius: 20rem;
+    }
+    .business-section{
+        position: relative;
+        margin-top: 10rem;
+    }
+    .swiper-slide{
+        width: 100%;
+    }
+    .business-slider-content{
+        max-width: 40rem;
+        margin-inline: auto;
+    }
+    /* =====about-us-section===== */
+    .about-circle,
+    .about-shape,
+    .about-image .img{
+        display: none !important;
+    }
+    .about-us-section{
+        margin-top: 0rem;
+    }
+    .about-image{
+        height: max-content;
+    }
+    /* ====expert-section==== */
+    .expert-section::after{
+        width: var(--max-size);
+        border-top-left-radius: 20rem;
+    }
+    .expert-section-text{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .expert-section-text p{
+        width: var(--max-size);
+        margin-top: var(--mb-1-5);
+    }
+    .expert-slide-content{
+        max-width: 40rem;
+        margin-inline:auto;
+    }
+    /* ===footer-section==== */
+    .footer-txt{
+        margin-block-end: 2rem;
+    }
+    .back-to-top.enable{
+        transform: scale(.7);
+        right:1rem;
+    }
+}
+
+/* =======responsive-for-small-device====== */
+@media screen and (min-width:576px) and (max-width:767.95px){
+    :root{
+        --bigger-font:4.5rem;
+        --big-font:3.5rem;
+        --medium-font:2rem;
+        --narmal-font:1.5rem;
+        --small-font:1.4rem;
+        --smaller-font:1.2rem;
+        }
+        .navigation-menu-logo nav{
+            width: 70%;
+        }
+        /* ====banner-section==== */
+        .header{
+            height: max-content;
+        }
+        .banner-text{
+            margin-block: 5rem;
+        }
+        .btn{
+            font-size: var(--smaller-font);
+        }
+        .banner-image{
+            height: max-content;
+        }
+        .banner-image .banner-shap,
+        .circle{
+            display: none;
+        }
+        .banner-image .img{
+            position: inherit;
+            width: 60%;
+            clip-path: none;
+            height: auto;
+        }
+        /* ====business-section===== */
+        .business-section::after{
+            width: var(--max-size);
+            border-top-right-radius: 20rem;
+        }
+        .business-section{
+            position: relative;
+            margin-top: 10rem;
+        }
+        .swiper-slide{
+            width: 100%;
+        }
+        .business-slider-content{
+            max-width: 42rem;
+            margin-inline: auto;
+        }
+        /* =====about-us-section===== */
+        .about-circle,
+        .about-shape,
+        .about-image .img
+        {
+            display: none !important;
+        }
+        .about-us-section{
+            margin-top: 0rem;
+        }
+        .about-image{
+            height: max-content;
+        }
+        /* ====expert-section==== */
+        .expert-section::after{
+            width: var(--max-size);
+            border-top-left-radius: 20rem;
+        }
+        .expert-section-text{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .expert-section-text p{
+            width: var(--max-size);
+            margin-top: var(--mb-1-5);
+        }
+        .expert-slide-content{
+            max-width: 45rem;
+            margin-inline:auto;
+        }
+}
+
+/* =====responsive-for-medium-device===== */
+@media screen and (min-width:768px) and (max-width:991.95px){
+    :root{
+        --bigger-font:4.5rem;
+        --big-font:3.5rem;
+        --medium-font:2rem;
+        --narmal-font:1.5rem;
+        --small-font:1.4rem;
+        --smaller-font:1.2rem;
+        }
+        .navigation-menu-logo nav{
+            width: 60%;
+        }
+        /* ==banner-section=== */
+        .banner-text{
+            margin-top: 0rem;
+        }
+        .banner-image .banner-shap{
+            width: 30.4rem;
+            height: 45.9rem;
+            top:15%;
+            right:50%;
+        }
+        .banner-image .img{
+            width: 35rem;
+            height: 55rem;
+            top:24%;
+            right:0%;
+        }
+        /* ====business-sectioon==== */
+        .swiper-slide{
+            width: 45%;
+        }
+        .business-slider-content{
+            max-width: 42rem;
+            margin-inline: auto;
+        }
+        /* ===about-us-section==== */
+        .about-shape{
+            width: 30rem;
+            top:13%;
+            left:0rem;
+        }
+        .about-image .img{
+            width: 33rem;
+            height: 50rem;
+            position: absolute;
+            top:3rem;
+            left:0;
+        }
+}
+
+/* ===responsive-for-large-device==== */
+@media screen and (min-width:991.95px) and (max-width:1199.95px){
+    /* ===header-section==== */
+    .navigation-menu-logo.fixed{
+        padding-inline: 7rem;
+    }
+    .navigation-menu-logo nav{
+        width: 40%;
+    }
+    /* ===banner-section==== */
+    .banner-image .banner-shap{
+        width: 36rem;
+        height: 52.9rem;
+        top:17%;
+        right:40%;
+    }
+    .banner-image .img{
+        width: 50rem;
+        height: 70rem;
+        top:20%;
+        right:0rem;
+    }
+    /* ====business-sectiion===== */
+    .swiper-slide{
+        width: 30%;
+    }
+    /* ====about-us-section==== */
+    /* ===about-us-section==== */
+    .about-shape{
+        width: 45rem;
+        top:13%;
+        left:0rem;
+    }
+    .about-image .img{
+        width: 45rem;
+        height: 50rem;
+        position: absolute;
+        top:8rem;
+        left:0;
+    }
+}
+
+/* ====responsive-for-extra-large-device===== */
+@media screen and (min-width:1600px){
+    #body{
+        width: 160rem;
+        margin: auto;
+    }
+    .header{
+        height: 70rem;
+    }
+    .navigation-menu-logo.fixed{
+        width: 160rem;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .back-to-top{
+        right:7%;
+    }
+
+}
